@@ -1,0 +1,118 @@
+body {
+	background-color: #4169E1;
+	
+}
+.active
+{
+	font-size:40px;
+	text-align:center;
+	margin-top:10%;
+}
+.AddImg {
+	background-image: url("/Images/image3.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 2px;
+}
+.clr{
+	color:black;
+}
+span {
+	background-color: #3281a8;
+	border: none;
+	color: white;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+*{
+ margin:0;
+ padding:0;
+ font-family:"Century Gothic";
+ color:white;
+ }
+a{
+	color:white;
+}
+.b{
+	color:black;
+}
+#b{
+	color:black;
+}
+#c {
+	color: black;
+}
+ form
+ {
+	 
+	 margin-top:4%;
+	margin-left:38%;
+	 
+ }
+ 
+ #e{
+ color: black;
+text-align: center;
+  font-size: 16px;
+	 
+ }
+	 #e:hover{
+	color:red;
+ }
+#f {
+	
+	text-align: center;
+	font-size: 16px;
+	
+}
+#f:hover {
+	color: red;
+}
+table{
+	margin-left:20%;
+}
+
+	table tr, td {
+		border: 2px solid black;
+		padding: 3px;
+		text-align: left;	
+	}
+.Nbdr1 {
+	background-color:red;
+	color: white;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+.Nbdr2 {
+	background-color:green;
+	color: white;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 12px;
+}
+.LPharm{
+	text-align:center;
+}
+.bclr{
+	background-color:#4169E1;
+	font-weight:bold;
+	font-size:20px;
+
+}

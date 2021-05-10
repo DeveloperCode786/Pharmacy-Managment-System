@@ -1,0 +1,52 @@
+﻿@model WebApplication6.Models.Detail
+
+@{
+    ViewBag.Title = "EditPharmacist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Pharmacist</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Edit Pharmacist</h2>
+    <form id="EditPharmacist" action="/Admin/EditPharm/@Model.Registration_No" method="get">
+
+        <strong>Name:</strong>
+        <input type="text" placeholder="Enter Pharmacist Name" name="name" value=@Model.U_Name class="b">
+        <br />
+        <br />
+        <strong>Gender:</strong>
+
+        <input type="radio" name="gender" value=Male class="b">Male
+        <input type="radio" name="gender" value="female" class="b">Female
+        <br />
+        <br />
+        <strong>Phone_no:</strong>
+        <select class="clr">
+            <option>0301</option>
+            <option>0302</option>
+            <option>0303</option>
+            <option>0304</option>
+            <option>0305</option>
+            <option>0306</option>
+        </select>
+        <input type="text" placeholder="47******" name="phone" value=@Model.Phone_No class="b">
+        <br />
+        <br />
+        <strong>CNIC_No:</strong>
+        <input type="text" placeholder="Ënter CNIC_no" class="b" name="cnic" value=@Model.CNIC>
+        <br />
+        <br />
+        <a href="#" class="button" id="e" onClick="document.getElementById('EditPharmacist').submit()">
+            <br /> <span><span>Edit Pharmacist</span></span>
+        </a>
+    </form>
+    <br />
+
+</body>
+</html>

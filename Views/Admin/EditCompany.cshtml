@@ -1,0 +1,40 @@
+﻿@model WebApplication6.Models.Company
+@{
+    ViewBag.Title = "EditCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Company</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Edit Company</h2>
+    <form id="EditCompany" action="/Admin/EditCmp/@Model.Company_Id" method="get">
+
+        <strong>Company Name:</strong>
+        <input type="text" name="Cname" placeholder="Enter Company Name" value="@Model.Company_Name" class="b" />
+        <br />
+        <br />
+        <strong>Company Address:</strong>
+        <input type="text" name="CAddress" placeholder="Enter Company Address" value="@Model.Company_Address" class="b" />
+        <br />
+        <br />
+
+        <strong>Contact No:</strong>
+        <input type="text" placeholder="Ënter Contact No" name="phn" value="@Model.Phone_No" class="b">
+        <br />
+        <br />
+
+        <a href="#" class="button" onClick="document.getElementById('EditCompany').submit()">
+            <span><span>Edit Company</span></span>
+
+        </a>
+    </form>
+    <br />
+
+</body>
+</html>

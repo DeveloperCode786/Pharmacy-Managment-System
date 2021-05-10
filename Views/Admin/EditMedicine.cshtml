@@ -1,0 +1,53 @@
+﻿@model WebApplication6.Models.Medicine
+
+@{
+    ViewBag.Title = "EditMedicine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Medicine</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Edit Medicine</h2>
+    <form id="EditMedicine" action="/Admin/EditMed/@Model.Id" method="get">
+
+        <strong>Name:</strong>
+        <input type="text" placeholder="Enter Medicine_Name" class="b" name="Mname" value=@Model.M_Name>
+        <br />
+        <br />
+        <strong>Price:</strong>
+        <input type="text" class="b" placeholder="Enter Medicine_Price" name="Mprice" value=@Model.M_Price />
+        <br />
+        <br />
+        <strong>Qty:</strong>
+        <input type="text" placeholder="Enter Medicine_Qty" class="b" name="Mqty" value=@Model.M_Qty>
+        <br />
+        <br />
+        <strong>Medicine Type:</strong>
+        <input type="text" placeholder="Enter Medicine_Type" name="Mtype" class="b">
+
+
+        <br />
+        <br />
+        <strong>Company:</strong>
+        <input type="text" placeholder="Enter Company Name" name="cmp" class="b"><br />
+        <br />
+
+
+        <br />
+
+        <a href="#" class="button" id="e" onClick="document.getElementById('EditMedicine').submit()">
+            <br /> <span><span>Edit Medicine</span></span>
+        </a>
+        <br />
+        <br />
+    </form>
+    <br />
+
+</body>
+</html>

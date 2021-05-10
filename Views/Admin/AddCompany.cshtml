@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApplication6.Models.Company>
+
+@{
+    ViewBag.Title = "AddCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Company</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Add New Company</h2>
+    <form id="AddCompany" action="/Admin/AddCmp" method="post">
+        <div>
+            <strong>Company Name:</strong>
+            <input type="text" name="Cname" placeholder="Enter Company Name" class="b" />
+            <br />
+            <br />
+            <strong>Company Address:</strong>
+            <input type="text" name="CAddress" placeholder="Enter Company Address" class="b" />
+            <br />
+            <br />
+           
+            <strong>Contact No:</strong>
+            <input type="text" placeholder="Ënter Contact No" name="phn" class="b">
+            <br />
+            <br />
+
+            <a href="#" class="button" onClick="document.getElementById('AddCompany').submit()">
+                <span><span>Add Company</span></span>
+
+            </a>
+        </div>
+    </form>
+    <br />
+    <h2 class="LPharm">***List of Companies***</h2>
+    <br />
+    <br />
+    <table width="600" cellspacing="0" cellpadding="0" border-spacing="0">
+
+        <tr class="bclr">
+            <td>Company Id</td>
+            <td>Company Name</td>
+            <td>Company Address</td>
+            <td>Phone No</td>
+            
+        </tr>
+        @foreach (var m in Model)
+        {
+    <tr>
+        <td>@m.Company_Id</td>
+        <td>@m.Company_Name</td>
+        <td>@m.Company_Address</td>
+        <td>@m.Phone_No</td>
+
+        <td>
+            <div class="Nbdr1">
+                <a href="/Admin/DeleteCmp/@m.Company_Id">Delete</a>
+
+            </div>
+            <div class="Nbdr2">
+                <a href="/Admin/EditCompany/@m.Company_Id">Edit</a>
+            </div>
+        </td>
+    </tr>
+        }
+
+    </table>
+</body>
+</html>

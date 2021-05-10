@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplication6.Models.Detail>
+
+@{
+    ViewBag.Title = "AddPharmacist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Pharmacist</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Add Pharmacist</h2>
+    <form id="AddPharmacist" action="/Admin/AddPharm" method="post">
+        <div>
+            <strong>Name:</strong>
+            <input type="text" name="name" placeholder="Enter Pharmacist Name" class="b" />
+            <br />
+            <br />
+            <strong>Gender:</strong>
+            <input type="radio" name="gender" value="male" class="b">Male
+            <input type="radio" name="gender" value="female" class="b">Female
+            <br />
+            <br />
+            <strong>Phone_no:</strong>
+            <select class="clr">
+                <option class="clr">0301</option>
+                <option class="clr">0302</option>
+                <option class="clr">0303</option>
+                <option class="clr">0304</option>
+                <option class="clr">0305</option>
+                <option class="clr">0306</option>
+            </select><input type="text" placeholder="47******" name="phone" class="b">
+            <br />
+            <br />
+            <strong>CNIC_No:</strong>
+            <input type="text" placeholder="Ënter CNIC_no" name="cnic" class="b">
+            <br />
+            <br />
+
+            <a href="#" class="button" onClick="document.getElementById('AddPharmacist').submit()">
+                <span><span>Add Pharmacist</span></span>
+
+            </a>
+        </div>
+    </form>
+    <br />
+    <h2 class="LPharm">***List of Pharmacist***</h2>
+    <br />
+    <br />
+    <table width="600" cellspacing="0" cellpadding="0" border-spacing="0">
+
+        <tr class="bclr">
+            <td>Reg_No</td>
+            <td>U_Name</td>
+            <td>Gender</td>
+            <td>Phone_No</td>
+            <td>CNIC</td>
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Registration_No</td>
+                <td> @m.U_Name </td>
+                <td> @m.Gender </td>
+                <td> @m.Phone_No </td>
+                <td> @m.CNIC </td>
+
+                <td>
+                    <div class="Nbdr1">
+                        <a href="/Admin/DeletePharm/@m.Registration_No">Delete</a>
+
+                    </div>
+                    <div class="Nbdr2">
+                        <a href="/Admin/EditPharmacist/@m.Registration_No">Edit</a>
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
+   

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacy Managment System</title>
+    <link rel="stylesheet" href="~/Scripts/css/style.css">
+</head>
+<body>
+    
+    <header>
+
+        <h1>Pharmacy Managment System</h1>
+        <div class="main">
+            <ul>
+                <li>  @Html.ActionLink("Home", "Home", "Admin", new { area = "" }, new { @class = "" })</li>
+                <li>
+                    @Html.ActionLink("Admin", "Home", "Admin")
+                    <ul>
+                        <li class="Cfont">@Html.ActionLink("Pharmacist_Managment  ", "AddPharm", "Admin")</li>
+                        <li class="Cfont">@Html.ActionLink("Medicine_Managment  ", "AddMed", "Admin")</li>
+                        <li class="Cfont">@Html.ActionLink("Company_Managment  ", "AddCmp", "Admin")</li>
+
+                    </ul>
+                </li>
+                <li>
+                    @Html.ActionLink("Pharmacist", "Home", "Admin")
+               
+
+                    <ul>
+                        <li class="Cfont">@Html.ActionLink("Medicine_Managment  ", "AddMed", "Admin")</li>
+                        <li>  @Html.ActionLink("Company_Managment", "AddCmp", "Admin")
+                    </ul>
+                </li>
+               
+            </ul>
+
+
+        </div>
+    </header>
+</body>
+</html>

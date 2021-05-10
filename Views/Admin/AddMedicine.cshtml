@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebApplication6.Models.Medicine>
+
+@{
+    ViewBag.Title = "AddMedicine";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Add Medicine</title>
+    <link rel="stylesheet" href="~/Scripts/css/style1.css">
+</head>
+<body class="AddImg">
+    <h2 class="active">Add Medicine</h2>
+    <form id="AddMedicine" action="/Admin/AddMed" method="post">
+
+        <strong>Name:</strong>
+        <input type="text" placeholder="Enter Medicine_Name" name="Mname" class="b">
+        <br />
+        <br />
+        <strong>Quantity:</strong>
+        <input type="text" placeholder="Enter Medicine_Qty" name="Mqty" class="b">
+        <br />
+        <br />
+
+        <strong>Price:</strong>
+        <input type="text" placeholder="Enter Medicine_Price" name="Mprice" class="b">
+        <br />
+        <br />
+        <strong>Medicine Type:</strong>
+       <input type="text" placeholder="Enter Medicine_Type" name="Mtype" class="b">
+
+
+        <br />
+        <br />
+        <strong>Company:</strong>
+        <input type="text" placeholder="Enter Company Name" name="cmp" class="b"><br />
+        <br />
+
+
+        <a href="#" class="button" id="e" onclick="document.getElementById('AddMedicine').submit()">
+            <br /> <span><span>Add Medicine</span></span>
+        </a>
+    </form>
+
+    <br />
+    <h2 class="LPharm">List of Medicines</h2>
+    <table width="600" cellspacing="0" cellpadding="0" border-spacing="0">
+        <tr class="bclr">
+            <td>Id</td>
+            <td>M_Name</td>
+            <td>M_Price</td>
+            <td>M_Qty</td>
+            <td>Medicine_Type</td>
+            <td>Company Name</td>
+
+        </tr>
+        @foreach (var a in Model)
+        {
+    <tr>
+        <td>@a.Id</td>
+        <td>@a.M_Name</td>
+        <td>@a.M_Price</td>
+        <td>@a.M_Qty</td>
+        <td>@a.Medicine_Type</td>
+        <td>@a.Company</td>
+        <td>
+            <div class="Nbdr1">
+                <a href="/Admin/DeleteMed/@a.Id">Delete</a>
+
+            </div>
+
+            <div class="Nbdr2">
+                <a href="/Admin/EditMedicine/@a.Id">Edit</a>
+            </div>
+        </td>
+    </tr>
+        }
+    </table>
+
+</body>
+</html>
